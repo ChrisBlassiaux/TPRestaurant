@@ -1,0 +1,479 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 16px; 
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.625;
+    color: #6F6F6F;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    transition: color .3s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* header */
+.header {
+    background: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%,rgba(28, 28, 28, 0.4)),
+        url("img/eggs.jpg") center center / cover no-repeat;
+
+    color: #FFF;
+}
+
+
+.topbar {
+    padding: 18px 20px;
+
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu__item:hover {
+
+    color: #C89446;
+}
+
+.topbar__logo {
+    margin-bottom: 15px;
+}
+
+.menu__item {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+
+
+.topbar__baseline {
+    padding: 50px 0 70px 0;
+
+    text-align: center;
+}
+
+
+.baseline__welcome {
+    display: block;
+
+    font-family: 'Pinyon Script', serif;
+    font-size: 2.2rem;
+    line-height: 1;
+    color: #C89446;
+}
+
+.baseline__name {
+    display: block;
+    padding-bottom: 10px;
+
+    line-height: 1;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.baseline__slogan {
+    display: block;
+
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.menu__button {      
+    padding: 7px 10px;
+    margin-top: 5px;
+    
+    border: solid 1px #C89446;
+
+    transition: .3s;
+}
+
+.menu__button:hover {
+    background-color: #C89446;
+
+    color: #FFF;
+}
+
+
+.home__section {
+    padding-top: 9px;
+}
+
+.container-small {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 960px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1150px;
+}
+
+.block {
+    margin-bottom: 50px;
+}
+
+
+
+.title {
+    margin-top: 1rem 0 0 0;
+
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.title span {
+    font-family: 'Pinyon Script', serif;
+    font-size: 2.5rem;
+    color: #C89446;
+    display: block;
+    text-transform: none;
+}
+
+.title::before {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 24px;
+    background: #C89446;
+    margin-bottom: .5rem;
+}
+
+.more {
+    color: #C89446;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
+
+.more::after {
+    content: ' >';
+}
+
+.block__img {
+    max-width: 350px;
+    margin: 0 auto;
+    border: solid 1px #C89446;
+}
+
+.block__center {
+    text-align: center;
+}
+
+
+.block__center .block__body {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Menu : ingredients */
+.ingredients__menu {
+    margin: 40px 0;
+
+    font-weight: 600;
+    color: #383838;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ingredients__menu a {
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+
+.ingredients__menu .a::after {
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    opacity: 0;
+    background: #C89446;
+    transition: .3s;
+}
+
+
+.ingredients__menu .active::after, 
+.ingredients__menu .a:hover::after{
+    bottom: 0;
+    opacity: 1;
+}
+
+/* menu summary */
+.menu__summary__item {
+    padding-left: 120px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.menu__summary__img {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu__summary__title {
+    font-size: 1.125rem;
+    color: #383838;
+    font-weight: bold;
+    padding-bottom: .75rem;
+    margin-bottom: 0;
+}
+
+.menu__summary p {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: .875rem;
+}
+
+.menu__summary__price {
+    font-size: 2.5rem;
+    font-family: 'Pinyon Script', serif;
+    color: #C89446;
+    line-height: 1;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    html {
+        font-size: 16px; 
+    }
+
+    .topbar__logo {
+        margin-bottom: 0;
+    }
+
+    .topbar {
+        display: flex;
+        max-width: 1150px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+    .topbar__baseline {
+        padding: 125px 0 227px 0;
+    }
+
+    .baseline__slogan {
+        font-size: 1.5rem;
+    }
+
+    .baseline__name {
+        padding-top: 8px;
+        padding-bottom: 15px;
+
+        font-size: 4.375rem;
+        letter-spacing: 12px;
+
+    }
+
+    .baseline__welcome {
+        font-size: 3.75rem;
+    }
+
+    .menu__button {      
+        margin-top: 0px;
+        margin-right: 0;
+    }
+
+    .block__img img {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    
+    .block {
+        margin-bottom: 100px;
+    }
+
+    .block__last {
+        margin-bottom: 60px;
+    }
+
+    .block__left,
+    .block__right {
+        display: flex;
+        align-items: center;
+    }
+
+    .block__img {
+        position: relative;
+        /* flex: none; */
+        justify-content: space-between;
+        border: none;
+    }
+
+    .block__left .block__body, .block__right .block__body {
+        width: 445px;
+        flex: none;
+    }
+
+     .block__img::before {
+        content: '';
+        display: block;
+        border: solid 1px #C89446;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .block__right .block__img::before {
+        left: auto;
+        right: -30px;
+    }
+ 
+
+    .block__left .block__img {
+        margin-left: 30px;
+    }
+
+    .block__right .block__img {
+        width: 350px;
+        margin-right: 30px;
+    }
+
+    .block__left .block__body {
+        margin-left: 20px;
+    }
+
+    .block__right .block__body {
+        margin-right: 20px;
+        order: -1;
+    }
+
+
+    .title {
+        margin-bottom: 1.1rem;
+    }
+
+
+    .more {
+        display: block;
+        margin-top: 1.3rem;
+    }
+
+
+    .home__section {
+        background: 
+            fixed top 95px right 0px url(img/oranges.jpg) no-repeat,
+            fixed top 640px left 0px url(img/spices.jpg) no-repeat;
+    }
+
+
+
+    /* ingredients menu */
+
+    .ingredients__menu a {
+        margin: 0 32px;
+    }
+
+
+
+    /* menu summary */
+    .menu__summary {
+        position: relative;
+        padding: 85px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .menu__summary__item {
+        padding-left: 192px;
+        margin-bottom: 110px;
+        width: calc(50% - 35px);
+    }
+
+    .menu__summary__item:nth-child(even) {
+        text-align: right;
+        padding-left: 0;
+        padding-right: 192px;
+    }
+
+    .menu__summary__item:nth-child(even) .menu__summary__img {
+        left: auto;
+        right: 0;
+    }
+
+    .menu__summary__item:nth-child(even) .menu__summary__price {
+
+        margin-left: auto;
+    }
+
+    .menu__summary__img {
+        width: 160px;
+    }
+
+
+    .menu__summary__title {
+        margin-top: 0;
+        line-height: 1.2;
+        background: #FFF;
+    }
+
+    .menu__summary p {
+        background: #FFF;
+    }
+
+    .menu__summary__price {
+        padding-top: 4px;
+        width: 85px;
+        background: #FFF;
+    }
+
+
+    .menu__summary::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 420px;
+        height: 420px;
+        border: solid 1px #C89446;
+        transform: translate(-50%, -260px) rotate(45deg);
+    }
+}
