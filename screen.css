@@ -267,6 +267,98 @@ img {
     line-height: 1;
 }
 
+.reservation {
+    background: 
+        linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%,rgba(28, 28, 28, 0.4)),
+        url("img/reservation.jpg") center center / cover no-repeat;
+
+    color: rgba(255, 255, 255, 0.6);
+    padding: 50px 0;
+}
+
+.reservation .title {
+    color: #FFF;
+}
+
+
+.reservation input,
+.reservation select {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 40px;
+    padding: 0 .5rem;
+
+
+    border: solid 1px #6F6F6F;
+
+    background: transparent;
+    
+
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: 'Source Sans Pro', serif;
+    font-size: .875rem;
+
+    transition: all .3s;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+.reservation select {
+
+    background: no-repeat right .5rem center url(img/Shape.svg);
+}
+
+.reservation input:focus,
+.reservation select:focus {
+
+    background-color: rgba(255, 255, 255, .1);
+    border-color: #C89446;
+}
+
+.reservation .button {
+    width: 100%;
+}
+
+.button {
+    width: 0 auto;
+    padding: 11px 1rem;
+
+    border: solid 1px transparent;
+
+    color: #FFF;
+    background: #C89446;
+    font-weight: 600;
+    font-size: .875rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button:hover {
+    background: transparent;
+
+    color: #C89446;
+    border: solid 1px #C89446;
+}
+
+.reservation p {
+    max-width: 625px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.reservation .block__center .block__body {
+    max-width: 825px;
+}
+
+select option {
+    color: #000;
+}
 
 @media only screen and (min-width: 600px) {
 
@@ -476,4 +568,52 @@ img {
         border: solid 1px #C89446;
         transform: translate(-50%, -260px) rotate(45deg);
     }
+
+    .block__chief {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+        
+
+    .block__chief .block__img{ 
+        flex: none;
+        width: 400px;
+        order: 1;
+    }
+
+    .block__chief .block__img::before { 
+        display: none;
+    }
+
+
+    .reservation {
+        padding: 100px 0px;
+    }
+    
+
+    .reservation .button {
+        width: 255px;
+    }
+
+    .reservation__form__row {
+        margin: 64px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    .reservation__form__row input,
+    .reservation__form__row select {
+        width: calc(33.33% - 20px);
+        margin-bottom: 0;
+    }
+
+    .reservation .button {
+        width: calc(33.33% - 20px);
+    }
+
+
 }
