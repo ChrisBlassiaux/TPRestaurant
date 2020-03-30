@@ -170,11 +170,11 @@ img {
     color: #C89446;
 }
 
-.more:hover {
+.more a:hover {
     text-decoration: underline;
 }
 
-.more::after {
+.more a::after {
     content: ' >';
 }
 
@@ -290,6 +290,7 @@ img {
 
 
     border: solid 1px #6F6F6F;
+    border-radius: 2px;
 
     background: transparent;
     
@@ -299,11 +300,13 @@ img {
     font-family: 'Source Sans Pro', serif;
     font-size: .875rem;
 
-    transition: all .3s;
+    transition: background-color .3s;
 
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+
+
 }
 
 
@@ -359,6 +362,79 @@ img {
 select option {
     color: #000;
 }
+
+.recipes {
+    padding: 50px 0;
+    background: no-repeat top left / 100vw auto url(img/news-bg.jpg);
+}
+
+.recipes .more {
+    margin-top: 60px;
+    display: block;
+    text-align: right;
+}
+
+.recipes__list {
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+.recipes__list strong {
+    color: #383838;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.recipes__date strong {
+    font-size: 1.75rem;
+    display: block;
+} 
+
+.recipes__list__item {
+    border-bottom: solid 1px #F2F2F2;
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+
+.recipes__list__item:last-child {
+    border-bottom: none;
+}
+
+.recipes__list {
+    max-width: 920px;
+    margin-left: auto;
+}
+
+.recipes__list__item {
+    display: flex;
+}
+.recipes__date {
+    width: 60px;
+    flex: none;
+    line-height: 1.2;
+}
+
+.recipes__list__item p {
+    margin: 0;
+}
+
+
+
+
+
+
+.map {
+    width: 100%;
+    height: 460px;
+}
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 600px) {
 
@@ -613,6 +689,41 @@ select option {
 
     .reservation .button {
         width: calc(33.33% - 20px);
+    }
+
+    .recipes {
+        padding: 60px 0;
+        background-size: 589px auto;
+        background-attachment: fixed;
+    }
+
+    .recipes .title {
+        text-align: right;
+    }
+    
+    .recipes .container > p{
+        text-align: right;
+        max-width: 716px;
+        margin-left: auto;
+    }
+
+    .recipes__date {
+        width: 95px;
+        flex: none;
+    }
+
+    .recipes__list {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .recipes__list__item {
+        margin-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .recipes__list__item:last-child {
+        padding-bottom: none;
     }
 
 
